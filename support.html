@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deposit Back · Help</title>
+<style>
+:root{--bg:#F4F6F5;--card:#FFFFFF;--ink:#1C2321;--muted:#5D6B67;--line:#D7DEDB;--accent:#17695A}
+@media (prefers-color-scheme: dark){:root{--bg:#111614;--card:#1B2320;--ink:#ECF1EF;--muted:#9AAAA5;--line:#2C3833;--accent:#5CC5A8}}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{font:16px/1.75 -apple-system,BlinkMacSystemFont,"Hiragino Sans","PingFang TC","PingFang SC","Apple SD Gothic Neo",sans-serif;-webkit-text-size-adjust:100%}
+main{max-width:700px;margin:0 auto;padding:44px 20px 80px}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+nav a{border:1px solid var(--line);border-radius:999px;padding:2px 12px;color:var(--ink);text-decoration:none;font-size:14px;background:var(--card)}
+section{padding-top:24px;border-top:1px solid var(--line);margin-top:40px}
+section:first-of-type{border-top:0;margin-top:0;padding-top:0}
+h1{font-size:28px;margin:0 0 4px;color:var(--accent)}
+h2{font-size:18px;margin:26px 0 6px}
+.meta{color:var(--muted);font-size:14px;margin:0 0 20px}
+.summary{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px}
+.summary p{margin:0}
+ul{padding-left:1.2em}li{margin:6px 0}
+code{font-size:13px;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1px 5px;word-break:break-all}
+a{color:var(--accent)}
+footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+<nav><a href="#en">English</a><a href="#zh-Hans">简体中文</a><a href="privacy.html">Privacy</a></nav>
+<section id="en" lang="en"><h1>Deposit Back · Help</h1><p class="meta">Contact: <a href="mailto:qq1261490932@163.com">qq1261490932@163.com</a></p><h2>How do the timestamps work?</h2><p>When you add photos, the app writes a manifest with the SHA-256 fingerprint of each new file and sends the manifest's fingerprint to two independent RFC 3161 timestamp authorities (DigiCert and FreeTSA; Sectigo if one fails). Their signed receipts prove the manifest — and every photo in it — existed no later than the time shown. Without a network connection the manifest is written straight away and stamped later.</p><h2>How can my landlord or a deposit scheme check the evidence?</h2><p>Export the evidence archive (free) from Reports. It contains every original file, the manifests, the timestamp receipts and VERIFY.txt with step-by-step OpenSSL commands, e.g. <code>shasum -a 256 media/photo.jpg</code> and <code>openssl ts -verify -data seals/X.json -in seals/X.digicert.tsr -CAfile /etc/ssl/cert.pem</code>.</p><h2>I moved in months ago. Is it too late?</h2><p>Try Evidence Rescue: it searches your photo library for pictures taken near the rental around the lease start date, with their original capture times. Listing screenshots from the advert also help. Then photograph the property now and log any issues.</p><h2>The re-shoot never fires automatically.</h2><p>Match the outline, keep the phone still for a moment, and make sure Auto is on. Standing at a different distance lowers the score — move closer or further. You can always tap the shutter yourself.</p><h2>What do I pay for?</h2><p>Photos, timestamps, re-shoots, Evidence Rescue, comparison, watermarked previews and the evidence archive are free. Exporting the finished PDF reports needs either a one-property unlock or the one-time Unlimited purchase. Use Restore Purchases in Settings for Unlimited on a new phone; single-property unlocks are stored with the property and come back with your iCloud backup.</p><h2>Where is my data?</h2><p>Only on your phone, in Files › On My iPhone › Deposit Back, and in your iCloud/device backup. If you delete a property or the app, its photos are gone — export the evidence archive first.</p><h2>Is this legal advice?</h2><p>No. The app records the condition of a property. Deposit rules differ by country and state; in a dispute, contact your deposit protection scheme, a tenants' organisation or a lawyer.</p></section>
+<section id="zh-Hans" lang="zh-Hans"><h1>押金卫士 · 帮助</h1><p class="meta">Contact: <a href="mailto:qq1261490932@163.com">qq1261490932@163.com</a></p><h2>时间戳是怎么回事？</h2><p>加入照片时，App 写一份清单，列出每个新文件的 SHA-256 指纹，再把清单的指纹发给两家独立的 RFC 3161 时间戳机构（DigiCert 和 FreeTSA，其中一家失败时用 Sectigo）。机构签名的回执证明清单和其中每张照片不晚于所示时间就已存在。没网时清单会先写好，联网后再补盖。</p><h2>房东或押金托管机构怎么核对？</h2><p>在「报告」里导出证据包（免费）：里面有所有原文件、清单、回执，以及写好 OpenSSL 命令的 VERIFY.txt，比如 <code>shasum -a 256 media/photo.jpg</code> 和 <code>openssl ts -verify -data seals/X.json -in seals/X.digicert.tsr -CAfile /etc/ssl/cert.pem</code>。</p><h2>入住好几个月了，来得及吗？</h2><p>试试「证据考古」：按出租屋位置和起租日期，从相册里找出当时拍的照片，保留原始拍摄时间。房源广告截图也很有用。然后现在就把房子拍一遍、记下已有问题。</p><h2>复拍一直不自动拍？</h2><p>对准轮廓、稳住一小会儿，确认「自动」是打开的。站得远近不一样分数会偏低，往前或往后挪一挪。也可以随时自己按快门。</p><h2>哪些要付费？</h2><p>拍照、时间戳、复拍、证据考古、对照、带水印的预览、证据包都免费。导出正式 PDF 报告需要单个房源解锁或一次买断「不限房源」。换手机后在设置里「恢复购买」可以找回买断；单个房源的解锁记在房源资料里，随 iCloud 备份恢复。</p><h2>我的数据在哪？</h2><p>只在你的手机上（「文件」› 我的 iPhone › 押金卫士）以及 iCloud / 设备备份里。删除房源或 App 后照片就没了——请先导出证据包。</p><h2>这是法律意见吗？</h2><p>不是。App 只记录房屋状况。各国各地的押金规则不同，有争议时请联系押金托管机构、租客组织或律师。</p></section>
+<footer>Deposit Back · 押金卫士 · 押金衛士 · 敷金ガード · 보증금 지킴이</footer>
+</main>
+</body>
+</html>
